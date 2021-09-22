@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Formulaire de Recrutement</title>
+    <title>Contact</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./img/core-img/favicon.png">
@@ -72,7 +72,7 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="page-title text-center">Formulaire de Recrutement</h2>
+                        <h2 class="page-title">Contact</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
 
@@ -90,12 +90,6 @@
         <div class="container">
             <div class="row">
                 <!-- Contact Us Thumb -->
-                <?php
-                if (isset($_GET["response"]) ){
-                  echo ' <div class="col-12 col-lg-12"><div class="alert alert-success text-center" role="alert">
-                        Votre condidature a été bien reçu </div></div>';
-                }
-                  ?>
                 <div class="col-12 col-lg-6">
                     <div class="contact-us-thumb mb-100">
                         <img src="img/bg-img/2.png" alt="">
@@ -107,175 +101,46 @@
                     <div class="contact_from_area mb-100 clearfix">
                         <!-- Contact Heading -->
                         <div class="contact-heading">
-                            <h4>Veuillez Remplir le Formulaire</h4>
+                            <h4>Contact us</h4>
                             <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae</p>
                         </div>
                         <div class="contact_form">
-                            <form action="VerifFormulaire.php" method="post" >
+                            <form action="mail.php" method="post">
                                 <div class="contact_input_area">
                                     <div class="row">
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="text" class="form-control mb-30 inputt" name="nom" id="name" placeholder="Nom" required>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="name" id="name" placeholder="Your Name" required>
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="text" class="form-control mb-30 inputt" name="prenom" id="name-2" placeholder="Prénom" required>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="name" id="name-2" placeholder="Last Name" required>
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="email" class="form-control mb-30 inputt" name="email" id="email" placeholder="E-mail" required>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control mb-30" name="email" id="email" placeholder="E-mail" required>
                                             </div>
                                         </div>
                                         <!-- Form Group -->
                                         <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="text" class="form-control mb-30 inputt" name="tel" id="subject" placeholder="Numéro de téléphone" required>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control mb-30" name="subject" id="subject" placeholder="Your Number">
                                             </div>
                                         </div>
                                         <!-- Form Group -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="text" class="form-control mb-30 inputt" name="fbLink" id="subject" placeholder="Lien de Votre Profil Facebook"required>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control mb-30" id="message" cols="30" rows="6" placeholder="Message" required></textarea>
                                             </div>
                                         </div>
-                                        <!--- next page -->
-                                        <div class="col-12 col-lg-6">
-                                            <div class="form-group fg">
-                                                <input type="text" class="form-control mb-30 inputt" name="class" id="subject" placeholder="Votre Classe (Ex:1IM,2ING, .." required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                                <b>Comment avez-vous parler entendu de notre recrutement ?</b>
-                                                <br>
-                                                   <input type="radio" class="" name="entendu" id="subject" placeholder="" value="isamm" required> ISAMM<br>
-                                                   <input type="radio" class="" name="entendu" id="subject" placeholder="" value="facebook" required> Facebook<br>
-                                                   <input type="radio" class="" name="entendu" id="subject" placeholder="" value="ami" required> Vos ami<br>
-                                                <input type="text" class="form-control mb-30 inputt" name="entendu" id="subject" placeholder="Autre">
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <div class="form-group ">
-                                                  <b>Avez-vous une expérience dans la vie associative ?</b>
-                                                  <br>
-                                                   <input type="radio" class="" name="exAsso" id="" placeholder="" value="oui" required> Oui<br>
-                                                   <input type="radio" class="" name="exAsso" id="" placeholder="" value="non" required> Non<br>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Si oui, lesquels?</b>
-                                                <input type="text" class="form-control mb-30 inputt" name="ouiExAsso" id="subject" placeholder="votre reponse" >
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <div class="form-group ">
-                                                <b>Préférez-vous le travail en groupe ou individuel?</b>
-                                                  <br>
-                                                     <input type="radio" class="" name="travail" id="subject" placeholder="" value="individuel" required>  Individuel<br>
-                                                    <input type="radio" class="" name="travail" id="subject" placeholder="" value="groupe" required> En groupe <br>
-                                              </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Pourquoi?</b>
-                                                <input type="text" class="form-control mb-30 inputt" name="travailPQ" id="subject" placeholder="votre reponse" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Quels Pole Souhaitez Vous Joindre?</b>
-                                              <br>
-                                                 <input type="radio" class="pole" name="pole" id="pole" value="p" placeholder="" required> Projet<br>
-                                                 <input type="radio" class="pole" name="pole" id="pole" value="dc" placeholder="" required> Developpement Commercial<br>
-                                                 <input type="radio" class="pole" name="pole" id="pole" value="m" placeholder="" required> Marketing<br>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Pourquoi avez-vous choisi ce pôle?</b>
-                                              <br>
-                                              <input type="text" class="form-control mb-30 inputt" name="q1Pole" id="subject" placeholder="votre reponse" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Que ferriez-vous pour nous qu'un autre ne pourrait pas faire? Que attendiez vous de nous en contre partie ? </b>
-                                              <br>
-                                              <input type="text" class="form-control mb-30 inputt" name="q2Pole" id="subject" placeholder="votre reponse" required>
-                                            </div>
-                                        </div>
-                                        <!-- projet -->
-                                        <div id="proj">
-                                        <div class="col-12 col-lg-12">
-                                            <div class="form-group fg">
-                                              <b>Listez les projets que vous avez fait? (ex : site web , design graphique , montage video , jeux video..)</b>
-                                              <br>
-                                              <input type="text" class="form-control mb-30 inputt" name="qProjet" id="subject" placeholder="votre reponse" required>
-                                            </div>
-                                        </div>
-                                      </div>
-                                      <!-- dc -->
-                                      <div id="devco">
-                                      <div class="col-12 col-lg-12">
-                                          <div class="form-group fg">
-                                            <b>Quelles sont les procédures de prospection commerciales ?</b>
-                                            <br>
-                                            <input type="text" class="form-control mb-30 inputt" name="qDevCo" id="subject" placeholder="votre reponse" required>
-                                          </div>
-                                      </div>
-                                    </div>
-                                    <!-- marketing -->
-                                    <div id="marketing">
-                                    <div class="col-12 col-lg-12">
-                                        <div class="form-group fg">
-                                          <b>Vous vous voyez en tant que:</b>
-                                          <br>
-                                             <input type="radio" class="" name="spec" id="" value="designer" placeholder="" required> Designer<br>
-                                             <input type="radio" class="" name="spec" id="" value="videaste" placeholder="" required> Vidéaste<br>
-                                             <input type="radio" class="" name="spec" id="" value="redacteur" placeholder="" required> Rédacteur<br>
-                                            <input type="radio" class="" name="spec" id="" value="photographe" placeholder="" required> Photographe<br>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-12">
-                                        <div class="form-group fg">
-                                          <b>Selon vous, que signifie le marketing?</b>
-                                          <br>
-                                          <input type="text" class="form-control mb-30 inputt" name="marketingQ1" id="subject" placeholder="votre reponse" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-12">
-                                        <div class="form-group fg">
-                                          <b>Notez vous votre niveau :</b>
-                                          <br>
-                                          Francais<br>
-                                             <input type="radio" class="" name="fr" id="" value="1" placeholder="" required> 1<br>
-                                             <input type="radio" class="" name="fr" id="" value="2" placeholder="" required> 2<br>
-                                             <input type="radio" class="" name="fr" id="" value="3" placeholder="" required> 3<br>
-                                            <input type="radio" class="" name="fr" id="" value="4" placeholder="" required> 4<br>
-                                            <input type="radio" class="" name="fr" id="" value="5" placeholder="" required> 5<br>
-                                            Anglais<br>
-                                            <input type="radio" class="" name="en" id="" value="1" placeholder="" required> 1<br>
-                                            <input type="radio" class="" name="en" id="" value="2" placeholder="" required> 2<br>
-                                            <input type="radio" class="" name="en" id="" value="3" placeholder="" required> 3<br>
-                                            <input type="radio" class="" name="en" id="" value="4" placeholder="" required> 4<br>
-                                           <input type="radio" class="" name="en" id="" value="5" placeholder="" required> 5<br>
-                                        </div>
-                                    </div>
-                                  </div>
                                         <!-- Button -->
                                         <div class="col-12">
-                                            <button type="submit" class="btn confer-btn">Valider <i class="zmdi zmdi-long-arrow-right"></i></button>
+                                            <button type="submit" class="btn confer-btn">Send Message <i class="zmdi zmdi-long-arrow-right"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -401,49 +266,5 @@
     <script src="js/default-assets/active.js"></script>
 
 </body>
-<script type="text/javascript">
-let projet = $("#proj")
-let devco = $("#devco")
-let marketing = $("#marketing")
-projet.css("display","none")
-devco.css("display","none")
-marketing.css("display","none")
 
-let current = ""
-  $(".pole").change(function(){
-    current = $(this).val()
-    if (current == "p"){
-      $('[name="qProjet"]').attr('required');
-      $('[name="qDevCo"]').removeAttr('required');
-      $('[name="spec"]').removeAttr('required');
-      $('[name="marketingQ1"]').removeAttr('required');
-      $('[name="fr"]').removeAttr('required');
-      $('[name="en"]').removeAttr('required');
-      projet.css("display","block")
-      devco.css("display","none")
-      marketing.css("display","none")
-    }else if (current =="dc"){
-      $('[name="qProjet"]').removeAttr('required');
-      $('[name="qDevCo"]').attr('required');
-      $('[name="spec"]').removeAttr('required');
-      $('[name="marketingQ1"]').removeAttr('required');
-      $('[name="fr"]').removeAttr('required');
-      $('[name="en"]').removeAttr('required');
-      projet.css("display","none")
-      devco.css("display","block")
-      marketing.css("display","none")
-    }else if (current == "m"){
-      $('[name="qProjet"]').removeAttr('required');
-      $('[name="qDevCo"]').removeAttr('required');
-      $('[name="spec"]').attr('required');
-      $('[name="marketingQ1"]').attr('required');
-      $('[name="fr"]').attr('required');
-      $('[name="en"]').attr('required');
-      projet.css("display","none")
-      devco.css("display","none")
-      marketing.css("display","block")
-    }
-
-  })
-    </script>
 </html>
